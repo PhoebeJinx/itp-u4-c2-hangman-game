@@ -1,0 +1,23 @@
+language: python
+sudo: false
+os:
+  - linux
+
+python:
+  - "2.7"
+  - "3.5"
+  - "3.6"
+
+install:
+  - pip install -r dev-requirements.txt
+
+script:
+  - "PYTHONPATH=. py.test tests.py"
+
+notifications:
+  webhooks:
+    urls:
+      - https://rmotr.com/api/v1/webhooks/travis/project-resolved
+    on_success: always
+    on_failure: never
+    on_start: never
