@@ -12,7 +12,7 @@ install:
   - pip install -r dev-requirements.txt
 
 script:
-  - "PYTHONPATH=. py.test tests.py"
+  - "py.test tests.py --tb=short -v"
 
 notifications:
   webhooks:
