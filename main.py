@@ -21,6 +21,13 @@ def main():
     print("=====================")
     print("###### Hangman ######")
     print("=====================")
+    print("         O-O         ")
+    print("          |          ")
+    print("        \_|_/        ")
+    print("          |          ")
+    print("          |          ")
+    print("         / \         ")
+    print("=====================")
 
     words = _input("Enter your list of words separated by comma. Leave empty for default: ")
     list_of_words = build_list_of_words(words, LIST_OF_WORDS)
